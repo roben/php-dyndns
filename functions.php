@@ -8,7 +8,7 @@ function requestCurl($data) {
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
   
   if (!$data = curl_exec($ch)) {
-    trigger_error('Curl execution error.', curl_error($ch), E_USER_ERROR);
+    trigger_error('Curl execution error.' . curl_error($ch), E_USER_ERROR);
     return false;
   }
 
